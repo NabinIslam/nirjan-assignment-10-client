@@ -31,7 +31,11 @@ const VisaDetails = () => {
         <Button onClick={() => setOpenModal(true)}>Apply for the visa</Button>
       </div>
 
-      <ApplyVisaModal openModal={openModal} setOpenModal={setOpenModal} />
+      <ApplyVisaModal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        visa={visa}
+      />
     </main>
   );
 };

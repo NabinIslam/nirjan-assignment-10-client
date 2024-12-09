@@ -4,19 +4,24 @@ import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import toast from "react-hot-toast";
 
-const ApplyVisaModal = ({ openModal, setOpenModal }) => {
+const ApplyVisaModal = ({ openModal, setOpenModal, visa }) => {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = data => {
     console.log("🚀 ~ onSubmit ~ data:", data);
 
+    const application = {
+      ...data,
+      visaInfo: visa,
+    };
+
     fetch("http://localhost:5000/visa-applications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(application),
     })
       .then(response => response.json())
       .then(data => {
@@ -70,11 +75,14 @@ const ApplyVisaModal = ({ openModal, setOpenModal }) => {
           </div>
           <div>
             <Label>Applied Date</Label>
-            <Datepicker
-              {...register("applied_date")}
-              defaultValue={date}
-              required
-            />
+            <div>
+              <input
+                type="date"
+                {...register("applied_date")}
+                defaultValue={date}
+                required
+              />
+            </div>
           </div>
           <div>
             <Label>Fee</Label>
