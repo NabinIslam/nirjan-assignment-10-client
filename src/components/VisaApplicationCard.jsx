@@ -2,7 +2,7 @@ const VisaApplicationCard = ({ visa }) => {
   return (
     <div className="border shadow rounded-lg p-5">
       <img
-        src={visa.visaInfo?.country_name}
+        src={visa.visaInfo?.country_image}
         alt={visa.visaInfo?.country_name}
         className="w-full h-32 object-cover rounded-t-lg"
       />
