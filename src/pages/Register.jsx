@@ -16,7 +16,6 @@ const Register = () => {
   const from = location.state?.from?.pathname || "/";
 
   const onSubmit = data => {
-    console.log(data);
     createUser(data.email, data.password)
       .then(() => {
         updateUser(data.name, data.photo)

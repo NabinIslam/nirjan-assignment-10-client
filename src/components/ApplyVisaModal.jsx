@@ -9,7 +9,6 @@ const ApplyVisaModal = ({ openModal, setOpenModal, visa }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = data => {
-    console.log("🚀 ~ onSubmit ~ data:", data);
 
     const application = {
       ...data,

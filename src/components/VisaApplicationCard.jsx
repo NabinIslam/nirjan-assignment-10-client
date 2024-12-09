@@ -1,5 +1,4 @@
 const VisaApplicationCard = ({ visa }) => {
-  console.log("🚀 ~ VisaApplicationCard ~ visa:", visa);
   return (
     <div className="border shadow rounded-lg p-5">
       <img
