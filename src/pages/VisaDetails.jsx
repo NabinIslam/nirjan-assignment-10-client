@@ -10,7 +10,7 @@ const VisaDetails = () => {
   const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/visas/id/${id}`)
+    fetch(`https://visa-master-server.vercel.app/visas/id/${id}`)
       .then(response => response.json())
       .then(data => setVisa(data));
   }, []);

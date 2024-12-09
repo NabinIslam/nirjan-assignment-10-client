@@ -7,7 +7,7 @@ const MyAddedVisas = () => {
   const [visas, setVisas] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/visas/${user?.email}`)
+    fetch(`https://visa-master-server.vercel.app/visas/${user?.email}`)
       .then(response => response.json())
       .then(data => setVisas(data))
       .catch(err => toast.error(`Couldn't load the visas`))

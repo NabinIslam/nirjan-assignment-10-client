@@ -25,7 +25,7 @@ const VisaCard = ({ visa }) => {
   } = visa;
 
   const handleDeleteVisa = () => {
-    fetch(`http://localhost:5000/visas/id/${_id}`, {
+    fetch(`https://visa-master-server.vercel.app/visas/id/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

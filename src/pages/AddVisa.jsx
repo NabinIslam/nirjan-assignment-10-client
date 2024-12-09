@@ -18,7 +18,7 @@ const AddVisa = () => {
   const onSubmit = data => {
     const visaData = { ...data, addedBy: user.email };
 
-    fetch("http://localhost:5000/visas", {
+    fetch("https://visa-master-server.vercel.app/visas", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

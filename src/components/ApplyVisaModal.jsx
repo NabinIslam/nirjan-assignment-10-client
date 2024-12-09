@@ -16,7 +16,7 @@ const ApplyVisaModal = ({ openModal, setOpenModal, visa }) => {
       visaInfo: visa,
     };
 
-    fetch("http://localhost:5000/visa-applications", {
+    fetch("https://visa-master-server.vercel.app/visa-applications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

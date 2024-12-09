@@ -11,8 +11,8 @@ const MyVisaApplications = () => {
   // Fetch visa applications
   const fetchApplications = (query = "") => {
     const url = query
-      ? `http://localhost:5000/visa-applications/${user?.email}?country_name=${query}`
-      : `http://localhost:5000/visa-applications/${user?.email}`;
+      ? `https://visa-master-server.vercel.app/visa-applications/${user?.email}?country_name=${query}`
+      : `https://visa-master-server.vercel.app/visa-applications/${user?.email}`;
 
     fetch(url)
       .then(response => response.json())

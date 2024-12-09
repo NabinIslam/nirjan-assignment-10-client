@@ -10,7 +10,7 @@ const AllVisas = () => {
     const queryParam = selectedVisaType
       ? `?visa_type=${encodeURIComponent(selectedVisaType)}`
       : "";
-    fetch(`http://localhost:5000/visas${queryParam}`)
+    fetch(`https://visa-master-server.vercel.app/visas${queryParam}`)
       .then(response => response.json())
       .then(data => setVisas(data))
       .finally(() => setLoading(false));
