@@ -1,10 +1,16 @@
+import { DarkThemeToggle, Flowbite } from "flowbite-react";
 import LatestVisas from "../components/LatestVisas";
+import ThemeToggle from "../components/ThemeToggle";
 
 const Homepage = () => {
   return (
-    <main>
-      <LatestVisas />
-    </main>
+    <Flowbite>
+      <main>
+        <ThemeToggle />
+        <LatestVisas />
+      </main>
+      <DarkThemeToggle />
+    </Flowbite>
   );
 };
 
