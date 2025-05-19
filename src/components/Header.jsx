@@ -2,19 +2,11 @@ import { useState, useEffect, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
-import {
-  Avatar,
-  Button,
-  Dropdown,
-  Navbar,
-  DarkThemeToggle,
-  Tooltip,
-} from "flowbite-react";
+import { Avatar, Button, Dropdown, Navbar, Tooltip } from "flowbite-react";
 import { FiSun, FiMoon, FiPlus, FiList, FiBriefcase } from "react-icons/fi";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log("🚀 ~ Header ~ user:", user)
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
